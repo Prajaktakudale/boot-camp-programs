@@ -19,7 +19,7 @@ public class VolumeTest {
     @Test
     public void shouldConvertLiterToMilileter() {
         Volume volume = new Volume(1, new Liter());
-        Volume volumeInMililiter = volume.convertTo(new Mililiter());
+        Quantity volumeInMililiter = volume.convertTo(new Mililiter());
 
         assertEquals(1000, volumeInMililiter.getValue(), 0.1);
     }
@@ -27,14 +27,14 @@ public class VolumeTest {
     @Test
     public void shouldConvertMililiterToLiter() {
         Volume volume = new Volume(10000, new Mililiter());
-        Volume volumeInLiter = new Volume(10,new Liter());
+        Quantity volumeInLiter = new Quantity(10,new Liter());
         assertEquals(volumeInLiter,volume.convertTo(new Liter()));
     }
 
     @Test
     public void shouldConvertKiloliterToLiter() {
         Volume volume = new Volume(10, new KiloLiter());
-                Volume volumeInLiter = new Volume(10000,new Liter());
+        Quantity volumeInLiter = new Quantity(10000,new Liter());
         assertEquals(volumeInLiter,volume.convertTo(new Liter()));
     }
 
@@ -42,7 +42,7 @@ public class VolumeTest {
     @Test
     public void shouldConvertGallonsToLiter() {
         Volume volume = new Volume(1, new Gallons());
-        Volume volumeInLiter = new Volume(3.785,new Liter());
+        Quantity volumeInLiter = new Quantity(3.785,new Liter());
         assertEquals(volumeInLiter,volume.convertTo(new Liter()));
     }
 
