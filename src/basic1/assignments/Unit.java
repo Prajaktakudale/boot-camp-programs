@@ -1,4 +1,4 @@
-package basic1;
+package basic1.assignments;
 
 public abstract class Unit {
     @Override

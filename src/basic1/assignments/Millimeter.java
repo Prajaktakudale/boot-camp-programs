@@ -1,8 +1,8 @@
-package basic1;
+package basic1.assignments;
 
-public class Milimeter extends Unit {
+public class Millimeter extends LengthUnit {
     private double defaultValue = 1;
-    public Milimeter() {
+    public Millimeter() {
     }
 
     @Override

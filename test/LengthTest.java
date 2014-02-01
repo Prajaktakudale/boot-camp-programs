@@ -1,31 +1,29 @@
-import basic1.*;
+import basic1.assignments.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class LengthTest {
-    @Test
-    public void checklengthForCentimeter() {
-        Length length = new Length(3, new Centimeter());
 
-        assertEquals(3, length.getValue(), 0.1);
-        assertEquals(new Centimeter(), length.getUnit());
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenLengthIsNegative() {
+        new Length(-3, new Meter());
     }
 
     @Test
-    public void checklengthforMeter() {
-        Length length = new Length(3, new Meter());
+    public void shouldConvertMeterToCentimeter() {
+        Length length = new Length(1, new Meter());
+        Length lengthInCentimeter = length.convertTo(new Centimeter());
 
-        assertEquals(3, length.getValue(), 0.1);
-        assertEquals(new Meter(), length.getUnit());
+        assertEquals(100, lengthInCentimeter.getValue(),0.1);
     }
 
     @Test
-    public void convertMeterToCentimeter() {
+    public void shouldCompareTwoLengthObject() {
         Length length = new Length(1, new Meter());
         Length lengthInCentimeter = new Length(100, new Centimeter());
 
-        assertEquals(lengthInCentimeter, length.convertTo(new Centimeter()));
+        assertEquals(lengthInCentimeter, length);
     }
 
     @Test
@@ -45,8 +43,8 @@ public class LengthTest {
     @Test
     public void convertMeterToMiliMeter() {
         Length length = new Length(1, new Meter());
-        Length lengthInMilimeter = new Length(1000, new Milimeter());
-        assertEquals(lengthInMilimeter, length.convertTo(new Milimeter()));
+        Length lengthInMilimeter = new Length(1000, new Millimeter());
+        assertEquals(lengthInMilimeter, length.convertTo(new Millimeter()));
     }
 
     @Test
@@ -83,6 +81,4 @@ public class LengthTest {
         Length length2 = new Length(160934.4, new Centimeter());
         assertEquals(length2, length1.convertTo(new Centimeter()));
     }
-
-
 }

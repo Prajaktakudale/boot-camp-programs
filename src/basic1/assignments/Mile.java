@@ -1,6 +1,6 @@
-package basic1;
+package basic1.assignments;
 
-public class Mile extends Unit {
+public class Mile extends LengthUnit {
     private double defaultValue = 1609344;
     public Mile() {
     }

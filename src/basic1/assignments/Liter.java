@@ -1,4 +1,4 @@
-package volumeAssignment;
+package basic1.assignments;
 
 public class Liter extends VolumeUnit{
     private double defaultValue = 1000;

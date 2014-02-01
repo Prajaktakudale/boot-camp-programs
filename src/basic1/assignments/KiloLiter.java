@@ -1,9 +1,8 @@
-package basic1;
+package basic1.assignments;
 
-public class Kilometer extends Unit {
+public class KiloLiter extends VolumeUnit{
     private double defaultValue = 1000 * 1000;
-
-    public Kilometer() {
+    public KiloLiter() {
     }
 
     @Override

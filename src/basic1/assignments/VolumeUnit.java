@@ -1,6 +1,4 @@
-package volumeAssignment;
-
-import basic1.Unit;
+package basic1.assignments;
 
 public abstract class VolumeUnit extends Unit {
 

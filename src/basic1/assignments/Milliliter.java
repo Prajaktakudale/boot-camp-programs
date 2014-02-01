@@ -1,9 +1,9 @@
-package volumeAssignment;
+package basic1.assignments;
 
-public class Mililiter extends VolumeUnit {
+public class Milliliter extends VolumeUnit {
     private double defaultValue = 1;
 
-    public Mililiter() {
+    public Milliliter() {
     }
 
     @Override

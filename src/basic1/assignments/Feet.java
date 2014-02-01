@@ -1,9 +1,6 @@
-package basic1;
+package basic1.assignments;
 
-/**
- * Created by prajaktv on 1/31/14.
- */
-public class Feet extends Unit {
+public class Feet extends LengthUnit {
     private double defaultValue = 305;
     public Feet() {
     }

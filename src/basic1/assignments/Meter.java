@@ -1,6 +1,6 @@
-package basic1;
+package basic1.assignments;
 
-public class Meter extends Unit {
+public class Meter extends LengthUnit {
     private double defaultValue = 1000;
     public Meter() {
     }
