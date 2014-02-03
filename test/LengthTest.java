@@ -77,8 +77,8 @@ public class LengthTest {
 
     @Test
     public void convertMileToMeters() {
-        Length length1 = new Length(1, LengthUnit.Meter);
-        Length length2 = new Length(160934.4, LengthUnit.Centimeter);
-        assertEquals(length2, length1.convertTo(LengthUnit.Centimeter));
+        Length length1 = new Length(1, LengthUnit.Mile);
+        Length length2 = new Length(1609.344, LengthUnit.Meter);
+        assertEquals(length2, length1.convertTo(LengthUnit.Meter));
     }
 }
