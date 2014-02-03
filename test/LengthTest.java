@@ -15,7 +15,7 @@ public class LengthTest {
         Length length = new Length(1, LengthUnit.Meter);
         Length lengthInCentimeter = length.convertTo(LengthUnit.Centimeter);
 
-        assertEquals(100, lengthInCentimeter.getValue(),0.1);
+        assertEquals(100, lengthInCentimeter.getValue(), 0.1);
     }
 
     @Test
@@ -80,5 +80,5 @@ public class LengthTest {
         Length length1 = new Length(1, LengthUnit.Meter);
         Length length2 = new Length(160934.4, LengthUnit.Centimeter);
         assertEquals(length2, length1.convertTo(LengthUnit.Centimeter));
-}
+    }
 }

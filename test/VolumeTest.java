@@ -1,8 +1,8 @@
-import basic1.assignments.Volume;
-import basic1.assignments.VolumeUnit;
+import basic1.assignments.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+
 
 public class VolumeTest {
 
@@ -22,7 +22,6 @@ public class VolumeTest {
     public void shouldConvertLiterToMilliliter() {
         Volume volume = new Volume(1, VolumeUnit.Liter);
         Volume volumeInMilliliter = volume.convertTo(VolumeUnit.Milliliter);
-
         assertEquals(1000, volumeInMilliliter.getValue(), 0.1);
     }
 
